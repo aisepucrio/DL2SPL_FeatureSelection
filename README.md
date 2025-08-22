@@ -39,29 +39,41 @@ Model performance is evaluated using Mean Absolute Percentage Error (MAPE) and t
 
 ```
 DL2SPL_FeatureSelection/
-├── data (2).parquet               # Main dataset for software performance prediction
-├── data_features_w2v.json         # Word2Vec features derived from textual/categorical data
-├── feature_importances_DecisionTree.csv  # Feature importance scores from Decision Tree
-├── feature_importances_GradientBoosting.csv # Feature importance scores from Gradient Boosting
-├── feature_importances_RandomForest.csv   # Feature importance scores from Random Forest
-├── feature_importances_XGBoost.csv      # Feature importance scores from XGBoost
-├── grid_search.py                 # Example script for grid search (hyperparameter tuning)
-├── grid_search-2.py               # Another example script for grid search
-├── LICENSE                        # MIT License file
-├── mape_summary.csv               # Summary of Mean Absolute Percentage Error (MAPE) results
-├── plots/                         # Directory for generated plots and visualizations
-├── pytorch.py                     # Main script for PyTorch Lightning model training and Ray Tune optimization
-├── pytorch2.py                    # Alternative/updated script for PyTorch Lightning model training and Ray Tune optimization
-├── pytorch_new_02.ipynb           # Jupyter notebook for new PyTorch experiments (potentially)
-├── pytorch_new_2_02.ipynb         # Another Jupyter notebook for new PyTorch experiments
-├── README.md                      # Original README file
-├── requirements.txt               # Python dependencies for the project
-├── results.ipynb                  # Jupyter notebook for analyzing experimental results
-├── teste.py                       # Test script (likely for development/debugging)
-├── Training time.ipynb            # Jupyter notebook for analyzing model training times
-├── training_times_summary.csv     # Summary of model training times
-├── clean results.ipynb            # Jupyter notebook for cleaning and organizing experiment results
-└── generate plots.ipynb           # Jupyter notebook for generating plots and visualizations
+├── data/
+│   ├── raw/
+│   │   └── data (2).parquet
+│   └── processed/
+│       └── data_features_w2v.json
+├── src/
+│   ├── models/
+│   │   ├── pytorch.py
+│   │   └── pytorch2.py
+│   ├── utils/
+│   │   ├── grid_search.py
+│   │   ├── grid_search-2.py
+│   │   └── teste.py
+│   └── feature_selection/
+│       ├── feature_importances_DecisionTree.csv
+│       ├── feature_importances_GradientBoosting.csv
+│       ├── feature_importances_RandomForest.csv
+│       └── feature_importances_XGBoost.csv
+├── notebooks/
+│   ├── 01_data_preparation.ipynb
+│   ├── 02_model_training_and_tuning.ipynb
+│   ├── 03_results_analysis.ipynb
+│   ├── Training time.ipynb
+│   ├── clean results.ipynb
+│   ├── generate plots.ipynb
+│   ├── pytorch_new_02.ipynb
+│   ├── pytorch_new_2_02.ipynb
+│   └── results.ipynb
+├── output/
+│   ├── mape_summary.csv
+│   ├── training_times_summary.csv
+│   └── plots/
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
 ## 3. Setup and Usage
